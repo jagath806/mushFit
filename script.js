@@ -4,6 +4,7 @@ const products = [
         id: 1,
         name: "Fresh Oyster Mushrooms",
         price: 60,
+        originalPrice: 70,
         unit: "120g",
         description: "Freshly harvested, 100% natural, and sustainably grown oyster mushrooms. Perfect for a healthy and tasty meal.",
         imagePath: "assets/packed_oyster.png" // The dedicated packed mushroom image
@@ -12,6 +13,7 @@ const products = [
         id: 2,
         name: "Homemade Mushroom Pickle",
         price: 100,
+        originalPrice: 110,
         unit: "150g",
         description: "Hygienically prepared, homemade mushroom pickle made with care and love. No chemicals, no preservatives, just pure nutrition and amazing taste.",
         imagePath: "assets/pickle.png" // The pickle image
@@ -127,7 +129,9 @@ function renderProducts() {
             </div>
             <div class="product-info">
                 <h3>${product.name}</h3>
-                <div class="price">₹${product.price} / ${product.unit}</div>
+                <div class="price">
+                    ${product.originalPrice ? `<del style="color: #999; font-size: 0.85em; font-weight: normal; margin-right: 6px;">₹${product.originalPrice}</del>` : ''}₹${product.price} / ${product.unit}
+                </div>
                 <button class="view-btn">View Details</button>
             </div>
         `;
@@ -148,7 +152,9 @@ function openProductDetail(productId) {
         </div>
         <div class="detail-info">
             <h2>${product.name}</h2>
-            <div class="price">₹${product.price} / ${product.unit}</div>
+            <div class="price">
+                ${product.originalPrice ? `<del style="color: #999; font-size: 0.8em; font-weight: normal; margin-right: 8px;">₹${product.originalPrice}</del>` : ''}₹${product.price} / ${product.unit}
+            </div>
             <p class="description">${product.description}</p>
             
             <div class="order-actions">
