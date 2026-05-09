@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mush Fit Mushrooms | Premium Fresh Mushrooms</title>
+    <meta name="description" content="Discover premium, farm-fresh mushrooms with Mush Fit. Order directly via WhatsApp.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Mush Fit Logo" style="height: 50px; border-radius: 8px;">
+        </div>
+        <div class="nav-controls" style="display: flex; align-items: center; gap: 1rem;">
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" data-target="home" class="active">Home</a></li>
+            <li><a href="#" data-target="products">Products</a></li>
+            <li><a href="#" data-target="about">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area for SPA -->
+    <main id="app-container">
+        
+        <!-- Home View -->
+        <section id="home" class="view active-view">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="badge floating">✨ 100% Organic Fungi</div>
+                    <h1>Nature's Finest,<br><span>Delivered Fresh.</span></h1>
+                    <p>Experience the earthy goodness and health benefits of premium cultivated mushrooms.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-btn" onclick="navigateTo('products')">Shop Harvest</button>
+                        <button class="secondary-btn" onclick="navigateTo('about')">Our Story</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <div class="feature-card">
+                    <div class="icon">🌱</div>
+                    <h3>Farm Fresh</h3>
+                    <p>Harvested daily to ensure maximum quality and freshness.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Carefully selected varieties with exceptional taste and nutrition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🚚</div>
+                    <h3>Direct Delivery</h3>
+                    <p>Order easily via WhatsApp and get it delivered to your door.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products View -->
+        <section id="products" class="view">
+            <div class="section-header">
+                <h2>Our Fresh Harvest</h2>
+                <p>Browse our selection of premium mushrooms</p>
+            </div>
+            
+            <div class="products-grid" id="products-list">
+                <!-- Product Cards will be injected via JS -->
+            </div>
+        </section>
+
+        <!-- Product Detail View -->
+        <section id="product-detail" class="view">
+            <button class="back-btn" onclick="navigateTo('products')">← Back to Products</button>
+            <div class="detail-container" id="detail-content">
+                <!-- Detail content injected via JS -->
+            </div>
+        </section>
+
+        <!-- About Us View -->
+        <section id="about" class="view">
+            <div class="about-container">
+                <div class="about-image-placeholder" style="background: transparent;">
+                    <img src="assets/about.png" alt="About Mush Fit" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px; box-shadow: var(--shadow-md);">
+                </div>
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>At Mush Fit, we believe in the power of fungi. Our journey started with a simple passion for cultivating the highest quality mushrooms. We use sustainable farming practices to bring you nutritious, delicious, and pristine mushrooms.</p>
+                    <p>Every batch is carefully monitored and harvested at the perfect time to ensure you get the best nature has to offer.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Mush Fit</h3>
+                <p>Premium Fresh Mushrooms</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" onclick="navigateTo('home')">Home</a>
+                <a href="#" onclick="navigateTo('products')">Products</a>
+                <a href="#" onclick="navigateTo('about')">About Us</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 Mush Fit. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
